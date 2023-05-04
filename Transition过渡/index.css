@@ -1,0 +1,15 @@
+.demo {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid #d32222;
+  /* https://www.runoob.com/css3/css3-transitions.html */
+  /* 过渡 */
+  transition: all 2s linear;
+}
+.demo:hover {
+  width: 200px;
+  height: 200px;
+  transform: rotate(90deg);
+}
+/* transition	简写属性，用于在一个属性中设置四个过渡属性。 */
