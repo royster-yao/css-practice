@@ -1,10 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>过渡</title>
+    <style>
+        .box1,
+        .box2,
+        .box3,
+        .box4,
+        .box5,
+        .box6
+        {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            /*
+            transition-property
+                    - 应用过渡的效果的属性
+                    - all 表示所有样式
+            transition-duration
+                    - 过渡效果花费的时间
+                    - 单位： s 秒 ms 毫秒
+            transition-delay
+                    - 过渡效果的延时
+            transition-timing-function
+                    - 指定过渡的时间的曲线
+                    - 可选值：
+                        ease: 默认值 先加速在减速
+                        linear: 匀速运动
+                        ease-in: 加速运动
+                        ease-out: 减速运动
+                        贝塞尔曲线 自定义运动方式
+                        steps() 分布执行动画
+            transition
+                    - 过渡的简写属性，可以同时设置过渡的所有样式
+            */
+            transition-property: all;
+            transition-duration: 3s;
+            /*transition-delay: 1s;*/
+            /*transition-timing-function: linear;*/
+        }
+        .box1 {
+            background-color: tomato;
+            transition-timing-function: steps(5);
+        }
+        body:hover .box1 {
+            /*width: 500px;*/
+            /*background-color: #bfa;*/
+            margin-left: 600px;
+        }
+        .box2 {
+            background-color: orange;
+            transition-timing-function: linear;
+        }
+        body:hover .box2 {
+            margin-left: 600px;
+        }
+        .box3 {
+            background-color: yellow;
+            transition-timing-function: ease-in;
+        }
+        body:hover .box3 {
+            margin-left: 600px;
+        }
+        .box4 {
+            background-color: green;
+            transition-timing-function: ease-out;
+        }
+        body:hover .box4 {
+            margin-left: 600px;
+        }
+        .box5 {
+            background-color: blue;
+            transition-timing-function: ease-in-out;
+        }
+        body:hover .box5 {
+            margin-left: 600px;
+        }
+        .box6 {
+            background-color: purple;
+        }
+        body:hover .box6 {
+            margin-left: 600px;
+            transition-timing-function: cubic-bezier(0,1.23,.42,1.15);
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div class="box1">default</div>
+    <div class="box2">linear</div>
+    <div class="box3">ease-in</div>
+    <div class="box4">ease-out</div>
+    <div class="box5">ease-in-out</div>
+    <div class="box6">cubic-bezier</div>
 </body>
 </html>
