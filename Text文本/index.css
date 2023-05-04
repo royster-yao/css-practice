@@ -1,0 +1,75 @@
+.text1 {
+  margin: 20px;
+  /* 文字颜色 */
+  color: #ba3535;
+
+  /* 文本对齐方式 */
+  text-align: center;
+  /* 当text-align设置为"justify"，每一行被展开为宽度相等，
+  左，右外边距是对齐（如杂志和报纸） */
+  /* text-align: justify; */
+
+}
+.text1 a {
+  /* 文字颜色 */
+  color: #31b19a;
+  /* 文本修饰 */
+  text-decoration: none;
+}
+
+h1 {
+  color: chartreuse;
+  text-align: center;
+  /* 文本阴影 */
+  text-shadow: 5px 5px 5px #ba3535;
+   /* 文本修饰 */
+
+   /* 上划线 */
+  /* text-decoration:overline; */
+
+  /* 将文字划掉 */
+  /* text-decoration:line-through; */
+
+  /* 下划线 */
+  text-decoration:underline;
+}
+span {
+  /* 文本转换 */
+  /* 将字母转化为大写 */
+  /* text-transform:uppercase; */
+
+  /* 将字母转化为x小写 */
+  /* text-transform:lowercase; */
+
+  /* 首字母大写 */
+  text-transform:capitalize;
+}
+.text2 {
+  margin: 20px;
+    /* 文本缩进 */
+    text-indent: -20px;
+}
+.boxshadow {
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  box-shadow: 10px 10px 5px #888888;
+}
+.test {
+    /* Text Overflow属性 */
+  /* https://www.runoob.com/cssref/css3-pr-text-overflow.html */
+  /* 指定应向用户如何显示溢出内容 */
+  /* text-overflow: clip|ellipsis|string|initial|inherit; */
+  width: 12em;
+  white-space: nowrap;
+  border: 1px solid #888;
+  overflow: hidden;
+  /* clip	剪切文本。 */
+  /* text-overflow: clip; */
+
+  /* ellipsis	显示省略符号 ... 来代表被修剪的文本。 */
+  /* text-overflow: ellipsis; */
+
+  /* string	使用给定的字符串来代表被修剪的文本。 */
+  text-overflow: string;
+}
