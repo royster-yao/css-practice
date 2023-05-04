@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>cube</title>
+    <style>
+        body {
+            perspective: 800px;
+        }
+        ul {
+            list-style: none;
+        }
+        .cube{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 200px auto;
+            transform: rotateX(45deg);
+            transform-style: preserve-3d;
+            transition: all 10s;
+        }
+        .cube:hover {
+            transform: rotateX(2turn) rotateY(2turn) rotateZ(2turn);
+        }
+        .cube li{
+            width: 200px;
+            height: 200px;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+            opacity: 0.7;
+            position: absolute;
+        }
+        .cube li:nth-child(1){
+            background-color: red;
+            transform: translateZ(100px);
+        }
+        .cube li:nth-child(2){
+            background-color: orange;
+            transform: rotateY(90deg) translateZ(100px) ;
+
+        }
+        .cube li:nth-child(3){
+            background-color: yellow;
+            transform: rotateX(90deg) translateZ(100px) ;
+        }
+        .cube li:nth-child(4){
+            background-color: green;
+            transform: rotateX(-90deg) translateZ(100px) ;
+        }
+        .cube li:nth-child(5){
+            background-color: blue;
+            transform: rotateY(-90deg) translateZ(100px) ;
+        }
+        .cube li:nth-child(6){
+            background-color: purple;
+            transform: translateZ(-100px) rotateX(180deg);
+        }
+    </style>
 </head>
 <body>
-$END$
+    <ul class="cube">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
 </body>
 </html>
