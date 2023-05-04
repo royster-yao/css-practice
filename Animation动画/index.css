@@ -1,0 +1,27 @@
+/* https://www.runoob.com/css3/css3-animations.html */
+/* 动画 */
+.demo {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: myAnimation 10s linear;
+}
+/* 定义动画 */
+@keyframes myAnimation {
+  25% {
+    background-color: yellow;
+    left: 100px;
+  }
+  50% {
+    background-color: greenyellow;
+    top: -100px;
+  }
+  75% {
+    background-color: yellow;
+    left: -100px;
+  }
+  100% {
+    background-color: red;
+    top: 100px;
+  }
+}
