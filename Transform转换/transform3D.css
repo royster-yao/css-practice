@@ -1,0 +1,40 @@
+.translate2D1 {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  text-align: center;
+  line-height: 200px;
+  background-color: #680909;
+  transition: all 1.5s; 
+  /* 旋转 rotate */
+  transform: rotate(30deg);
+}
+.translate2D1:hover {
+    /* 2D转换 */
+  /* https://www.runoob.com/css3/css3-2dtransforms.html */
+
+
+  /* 移动 translate  */
+  /* transform: translate(水平方向,垂直方向) */
+  transform: translate(50px,50px);
+  /* 变换伸缩 scale */
+  /* 水平方向变化的倍数 */
+  transform: scale(1.5,1.5);
+}
+.translate2D2 {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  margin: 40px auto;
+  text-align: center;
+  background-color: #680909;
+  transition: all 1s;
+}
+.translate2D2:hover {
+  /* transform: skew(angle,abgle); */
+  /* skewX(<angle>);表示只在X轴(水平方向)倾斜。
+    skewY(<angle>);表示只在Y轴(垂直方向)倾斜 */
+  /* transform: skewX(30deg); */
+  /* transform: skew(30deg,30deg); */
+  transform: skew(30deg,30deg);
+}
