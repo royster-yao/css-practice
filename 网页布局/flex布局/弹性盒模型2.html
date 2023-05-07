@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      ul {
+        width: 800px;
+        border: 10px solid red;
+        display: flex;
+        justify-content: start;
+        /* flex-flow: column; */
+      }
+      li {
+        width: 100px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+        color: #fff;
+
+        /* 
+        弹性子元素的样式
+          flex-basis
+            - 弹性子元素的基础大小 设置子元素在主轴上的盒子大小
+              主轴水平，设置宽度
+              主轴垂直，设置高度
+            - 可选值：
+                auto 默认值 以元素的 width 或 height 为准
+          flex-shrink
+            - 弹性子元素的收缩系数
+              当父元素容纳不下所有子元素时，如何自动缩小元素大小  
+            - 元素的收缩是根据 flex-basis 和 flex-shrink综合计算的
+                收缩系数越大，元素基础大小越大，元素就缩的越多
+            - 默认值为1，可以根据需要设置，如果设置为 0 则不收缩
+
+          flex-grow
+            - 弹性子元素的生长系数
+            - 当容器中，有富裕空间时，如何分配到子元素  
+            - 默认值为 0 ，元素默认不会变大
+
+
+          flex 
+            - 上述三个属性的简写属性
+            - 属性顺序
+                grow shrink basis
+            - 可选值：
+              initial 默认值 0 1 auto
+              auto 相当于 1 1 auto
+              none 相当于 0 0 auto 
+
+         */
+        flex: 1 1 auto;
+        /* flex-basis: auto;
+        flex-shrink: 1;
+        flex-grow: 1; */
+      }
+      li:nth-child(1) {
+        background-color: #bfa;
+      }
+      li:nth-child(2) {
+        background-color: orange;
+      }
+      li:nth-child(3) {
+        background-color: yellowgreen;
+      }
+      li:nth-child(4) {
+        background-color: tomato;
+      }
+      li:nth-child(5) {
+        background-color: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </body>
+</html>

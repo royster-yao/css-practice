@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      /*
+          弹性容器
+            - 要使用弹性盒必须先将元素设置为弹性容器
+                display:flex 块级弹性容器
+                display:inline-flex 行内弹性容器
+          弹性子元素
+            - 弹性容器的子元素都会自动变为弹性项
+            - 弹性子元素都会沿着弹性容器的主轴排列
+
+
+      */
+
+      ul {
+        width: 300px;
+        height: 800px;
+        border: 10px solid red;
+        display: flex;
+        /*
+          主轴
+            - 主轴就是弹性子元素排列方向
+            - 设置主轴方向
+                flex-direction
+                  可选值:
+                    row 默认值 主轴是自左向右水平排列
+                    column 主轴是自上向下垂直排列
+                    row-reverse 主轴是自右向左水平排列
+                    column-reverse 主轴是自下向上垂直排列
+                flex-wrap
+                  - 设置元素是否自动换行
+                    可选值:
+                      nowrap 默认值，不自动换行
+                      wrap 自动换行
+                      wrap-reverse 反向换行
+                flex-flow
+                  flex-direction 和 flex-wrap 的简写属性
+                      - 可以同时设置两个样式并且没有顺序和数量的要求
+                justify-content 设置元素在主轴上的对齐方式
+                    - 可选值:
+                      start 默认值，元素从主轴起始位置对齐
+                      end 元素靠主轴的结束位置对齐
+                      center 沿着主轴居中对齐
+                      space-between 将主轴方向空白位置分配到两个元素之间
+                      space-around 将主轴方向空白位置平均分配给每个元素
+                      space-evenly 将主轴方向空白位置平均分配元素的一侧
+          侧轴(辅轴)
+            - 侧轴是与主轴垂直方向的轴
+                align-items 设置元素在辅轴上的对齐方式
+                    可选值:
+                      stretch 拉伸，元素会自动拉伸将侧轴充满
+                      start 元素靠侧轴的起始位置对齐
+                      end 元素靠侧轴的结束位置对齐
+                      center 沿着侧轴居中对齐
+                align-content 设置元素在侧轴上空白空间的分配
+                      space-between 将侧轴方向空白位置分配到两个元素之间
+                      space-around 将侧轴方向空白位置平均分配给每个元素
+                      space-evenly 将侧轴方向空白位置平均分配元素的一侧
+
+          侧轴(辅轴)
+        */
+        /*flex-direction: row;*/
+        /*flex-wrap: wrap-reverse;*/
+        flex-flow: row wrap;
+        /* justify-content: space-evenly; */
+        align-items: start;
+        align-content: space-evenly;
+      }
+      li {
+        width: 100px;
+        /* height: 100px; */
+        text-align: center;
+        line-height: 100px;
+        font-size: 30px;
+        color: #fff;
+      }
+      li:nth-child(1) {
+        background-color: #bfa;
+      }
+      li:nth-child(2) {
+        background-color: orange;
+      }
+      li:nth-child(3) {
+        background-color: yellowgreen;
+      }
+      li:nth-child(4) {
+        background-color: tomato;
+      }
+      li:nth-child(5) {
+        background-color: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      通过弹性盒模型，可以快捷完成网页种各种布局
+     -->
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </body>
+</html>
