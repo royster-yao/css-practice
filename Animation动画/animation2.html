@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+  <style>
+      @keyframes move {
+        from {
+          margin-left: 0;
+          background-color: #bfa;
+        }
+        /*50% {*/
+        /*  margin-left: 250px;*/
+        /*}*/
+        to {
+          margin-left: 500px;
+          background-color: deepskyblue;
+        }
+      }
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        animation-name: move;
+
+        /*
+           animation-duration 一次动画需要的时间
+        */
+        animation-duration: 5s;
+
+        /*
+          animation-iteration-count 动画重复的次数
+        */
+        animation-iteration-count: 10;
+
+        /*
+          animation-delay 第一次动画的延时
+        */
+        /*animation-delay: 5s;*/
+
+        /*
+          animation-timing-function 时间函数 与 过渡差不多
+        */
+        animation-timing-function: linear;
+
+        /*
+          animation-direction 动画的方向
+              - 可选值:
+                  normal 默认值
+                  reverse 动画方向执行
+                  alternate 动画正向反向交替执行
+                  alternate-reverse 动画反向正向交替执行
+        */
+        /*animation-direction: alternate-reverse;*/
+
+        /*
+          animation-fill-mode
+              - 动画的填充模式
+                  - 可选值
+                      none 默认值 延时时元素保持不变，动画执行结束时，恢复原状
+                      forwards 延时时，元素保持不变，动画执行结束时保持最终状态
+                      backwards 延时时元素变为初始状态，动态执行结束恢复原状
+                      both 结合 forwards 和 backwards 的样式
+        */
+        /*animation-fill-mode: both;*/
+
+      /*
+          animation-play-state
+              - 动画的播放状态
+              - 可选值：
+                  paused  暂停
+
+       */
+
+      /*
+          animation 简写属性，可以同时设置动画相关的样式
+      */
+      }
+      .box1:hover {
+        animation-play-state: paused;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+</body>
+</html>
