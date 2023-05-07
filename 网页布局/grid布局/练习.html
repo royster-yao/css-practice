@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .outer {
+        width: 570px;
+        border: 1px red solid;
+        display: grid;
+        grid-template-columns: 120px 150px 150px 150px;
+        grid-template-rows: 100px 200px 180px 100px;
+      }
+      .outer div {
+        border: 1px #000 solid;
+      }
+      .outer div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+      .outer div:nth-child(2) {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      .outer div:nth-child(3) {
+        grid-column-start: 2;
+        grid-column-end: -1;
+      }
+      .outer div:nth-child(7) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div>网页的头部</div>
+      <div>菜单</div>
+      <div>上半部分</div>
+      <div>图片</div>
+      <div>图片</div>
+      <div>图片</div>
+      <div>底部</div>
+    </div>
+  </body>
+</html>
