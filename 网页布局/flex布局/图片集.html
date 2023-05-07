@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    .root {
+      display: flex;
+    }
+    li {
+      width: 50px;
+      height: 500px;
+      border-radius: 50px;
+      border: 5px skyblue solid;
+      flex: 1;
+      transition: all 0.6s linear;
+    }
+    li:hover {
+      flex: 3;
+    }
+    .root li:nth-child(1) {
+      background-image: url("./images/1.jpeg");
+      background-size: cover;
+    }
+    .root li:nth-child(2) {
+      background-image: url("./images/2.jpeg");
+      background-size: cover;
+    }
+    .root li:nth-child(3) {
+      background-image: url("./images/4.jpeg");
+      background-size: cover;
+    }
+    .root li:nth-child(4) {
+      background-image: url("./images/5.jpeg");
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <ul class="root">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+</html>
