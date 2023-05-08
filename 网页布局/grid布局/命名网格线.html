@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        display: grid;
+        border: 4px orange solid;
+        grid-gap: 10px;
+
+        /* 
+          可以为网格线命名
+        */
+        grid-template-columns: [a] 200px [b]200px [c]200px [d];
+        grid-template-rows: [head-row-start]200px [head-row-end side-row-start]200px [side-row-end];
+      }
+      .outer div {
+        border: 4px red solid;
+      }
+      .box1 {
+        grid-column: a/c;
+        grid-row: side-row-start/side-row-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+      <div class="box4">box4</div>
+      <div class="box5">box5</div>
+      <div class="box6">box6</div>
+    </div>
+  </body>
+</html>
