@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 500px;
+        height: 500px;
+        border: 10px red solid;
+        display: grid;
+
+        /*
+          justify-items 
+            - 设置网格中元素水平的对齐方式
+          aligh-items
+            - 设置网格中元素垂直的对齐方式
+        */
+        justify-items: center;
+        align-items: center;
+      }
+      .box2 {
+        height: 100px;
+        width: 100px;
+        background-color: #bfa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2">aaa</div>
+    </div>
+  </body>
+</html>

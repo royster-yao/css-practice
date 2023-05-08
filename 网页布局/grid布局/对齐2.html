@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        width: 800px;
+        height: 800px;
+        display: grid;
+        border: 4px orange solid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: 200px 200px;
+        /* 
+          justify-items / align-items 网格项在轨道中的对齐方式
+        */
+        /* justify-items: center;
+        align-items: center; */
+
+        /* 
+          justify-content 
+          align-content
+            - 设置网格项的整体对齐
+        */
+        justify-content: space-around;
+        align-content: space-between;
+      }
+      .outer div {
+        border: 4px red solid;
+      }
+      /* .box1 { */
+      /* 
+          justify-self
+          align-self
+            - 单独设置某一个网格项在轨道中的对齐方式
+        */
+      /* justify-self: start;
+        align-self: start; */
+      /* } */
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+      <div class="box4">box4</div>
+      <div class="box5">box5</div>
+      <div class="box6">box6</div>
+    </div>
+  </body>
+</html>
