@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        display: grid;
+        border: 4px orange solid;
+        grid-gap: 10px;
+
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: 100px 200px 200px 100px;
+
+        /* 
+          grid-template-areas
+            - 可以设置命名的区域如何在容器中排布
+        */
+        grid-template-areas:
+          "head head head ."
+          "side main main main"
+          "side main main main"
+          "foot foot foot foot";
+      }
+      .outer div {
+        border: 4px red solid;
+      }
+      .box1 {
+        /* grid-column: 1/-1; */
+        grid-area: head;
+      }
+      .box2 {
+        grid-area: side;
+      }
+      .box3 {
+        grid-area: main;
+      }
+      .box4 {
+        /* grid-column: 1/-1; */
+        grid-area: foot;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="box1">头部</div>
+      <div class="box2">侧边栏</div>
+      <div class="box3">主要内容</div>
+      <div class="box4">box4</div>
+    </div>
+  </body>
+</html>
