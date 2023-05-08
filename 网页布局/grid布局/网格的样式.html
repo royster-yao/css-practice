@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .outer {
+        width: 570px;
+        border: 1px red solid;
+        display: grid;
+        grid-template-columns: 120px 150px 150px 150px;
+        grid-template-rows: 100px 200px 180px 100px;
+        /* grid-column-gap: 10px;
+        grid-row-gap: 10px; */
+        grid-gap: 10px;
+      }
+      .outer div {
+        border: 1px #000 solid;
+      }
+      .outer div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 1;
+
+        /* 
+          可以通过 z-index 来调整网格项的层级
+
+           grid-column 同时设置列开始和结束
+              grid-column: 开始/结束
+           grid-row 同时设置行开始和结束
+              grid-row: 开始/结束
+           grid-area 同时设置行列的开始和结束
+              grid-area: 行开始/列开始/行结束/列结束
+          grid-column-gap 列间距
+          grid-row-gap 行间距
+          grid-gap 同时指定行间距和列间距
+            grid-gap 行间距 列间距
+        */
+      }
+      .outer div:nth-child(2) {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+
+        /* 
+          grid-column : grid-column-start/grid-column-end
+        */
+        /* grid-column: 1/2; */
+        /* grid-row-start: 1;
+        grid-row-end: 4; */
+
+        /* 
+          grid-row:  grid-row-start/grid-row-end
+        */
+        /* grid-row: 1/4; */
+
+        /* 
+          grid-area: grid-row-start/grid-column-start/grid-row-end/grid-column-end
+        */
+        grid-area: 2/1/4/2;
+      }
+      .outer div:nth-child(3) {
+        grid-column-start: 2;
+        grid-column-end: -1;
+      }
+      .outer div:nth-child(7) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div>网页的头部</div>
+      <div>菜单</div>
+      <div>上半部分</div>
+      <div>图片</div>
+      <div>图片</div>
+      <div>图片</div>
+      <div>底部</div>
+    </div>
+  </body>
+</html>
