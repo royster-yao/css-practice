@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>媒体查询</title>
+    <style>
+      /* 
+        @media 设备类型{}
+                all 任意类型的设备
+                screen 带有屏幕的设备
+                print 打印设备
+                speech 屏幕阅读器
+       */
+
+      /* body {
+        color: orange;
+      }
+
+      @media print {
+        body {
+          color: red;
+        }
+      } */
+
+      /* @media screen, print {
+        body {
+          color: red;
+        }
+      } */
+
+      /* 
+        min-width 指定最小视口，大于等于指定值时，样式生效
+        max-width 指定最大视口，小于等于指定值时，样式生效
+      */
+      /* @media (max-width: 500px) {
+        body {
+          background-color: #bfa;
+        }
+      } */
+
+      /* 
+        , 或
+        not 非
+        and 与
+        only 唯一
+          - 主要避免一些兼容性的问题
+      */
+
+      /* @media (min-width: 500px) and (max-width: 800px) {
+        body {
+          background-color: #bfa;
+        }
+      } */
+      @media only screen {
+        body {
+          background-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    媒体查询(media query)
+    - 通过媒体查询可以为不同的设备，不同的屏幕大小设置不同的样式
+   -->
+    <h1>今天天气真不错</h1>
+  </body>
+</html>

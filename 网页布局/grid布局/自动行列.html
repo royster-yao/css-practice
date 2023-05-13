@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        display: grid;
+        border: 4px orange solid;
+
+        grid-gap: 10px;
+
+        /* 
+            grid-auto-flow 网格项的排列方式
+              - 可选值
+                row 默认值，优先填充行，行满了会自动创建新行
+                column 优先填充列，列满了会自动换到下一列，此时会自动生成行
+                dense 紧凑的，只要容器中有位置，后边的元素会自动补位
+
+             grid-auto-rows
+              - 指定自动行的大小
+          */
+        grid-auto-flow: dense;
+        /* grid-template-rows: repeat(1, 100px); */
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 100px 200px 300px;
+        /* grid-auto-columns: 200px; */
+      }
+      .outer div {
+        border: 4px red solid;
+      }
+      .box2 {
+        grid-row: 2/4;
+      }
+      .box3 {
+        grid-column: 3/4;
+      }
+      .box5 {
+        grid-column: 3/4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+      <div class="box4">box4</div>
+      <div class="box5">box5</div>
+      <div class="box6">box6</div>
+      <div class="box7">box7</div>
+      <div class="box8">box8</div>
+      <div class="box9">box9</div>
+      <div class="box10">box10</div>
+      <div class="box11">box11</div>
+      <div class="box12">box12</div>
+    </div>
+  </body>
+</html>
